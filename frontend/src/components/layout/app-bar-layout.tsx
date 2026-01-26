@@ -22,6 +22,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getErrorMsg } from '@/utils/helpers/get-error-message';
 import { useLogoutMutation } from '@/domains/auth/api';
 import { getUserEmail, getUserName, getUserRole, resetUser } from '@/domains/auth/slice';
+import { WalletConnect } from '../../components/wallet-connect';
 
 type AppBarLayoutProps = {
   handleDrawerToggle: () => void;
@@ -77,6 +78,8 @@ export const AppBarLayout: React.FC<AppBarLayoutProps> = ({
           <MenuBook />
         </IconButton>
         <Box sx={{ flexGrow: 1 }}></Box>
+        <WalletConnect />
+          <Divider />
         <Button
           sx={{ color: 'black' }}
           size='large'

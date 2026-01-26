@@ -77,6 +77,9 @@ export const DrawerContent: React.FC<DrawerContentProps> = ({
               );
             }
           })}
+        <ListItemButton key={"Certifications"} component={Link} to={`/app/certification`}>
+          <ListItemText primary={"Certifications"} />
+        </ListItemButton>
       </List>
     </div>
   );
