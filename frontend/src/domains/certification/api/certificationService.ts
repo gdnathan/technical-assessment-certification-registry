@@ -1,7 +1,17 @@
 import { Contract, JsonRpcSigner } from 'ethers';
-import CertificateRegistryABI from './CertificateRegistry.json';
+                                            
+// const [abiRes, addrRes] = await Promise.all([
+//   fetch('/shared/CertificateRegistryModule#CertificateRegistry.json'),
+//   fetch('/shared/deployed_addresses.json')
+// ]);
+//
+// const CONTRACT_ADDRESS = await addrRes.json();
+// const CertificateRegistryABI = await abiRes.json();
 
-const CONTRACT_ADDRESS = import.meta.env.CERTIFICATE_CONTRACT_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+import addresses from '/app/public/contracts/deployed_addresses.json';
+
+import CertificateRegistryABI from '/app/public/contracts/CertificateRegistry.json';
+const CONTRACT_ADDRESS = addresses["CertificateRegistryModule#CertificateRegistry"];
 console.log("CONTRACT ADDRESS: ", CONTRACT_ADDRESS);
 
 export interface Certificate {
