@@ -2,6 +2,13 @@
 
 A comprehensive full-stack web application for managing school operations including students, staff, classes, notices, and leave management. This project serves as a skill assessment platform for **Frontend**, **Backend**, and **Blockchain** developers.
 
+## Completion
+
+I completed problem 3 and problem 5.
+The contract is tested and working, and `docker-compose up` will also build and deploy the contract, share it's info (abi and address) with the front end, and in case of dev mode, will run a local hardhat node in a container for tests.
+
+note: because of an issue with the front end routing system, the certificate management page is on `http://localhost:5173/app/roles-and-permissions`
+
 ## 🏗️ Project Architecture
 
 ```
